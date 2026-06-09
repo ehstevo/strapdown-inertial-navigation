@@ -30,19 +30,20 @@ The aircraft then follows a counterclockwise circular trajectory defined in a lo
 
 The path is parameterized by:
 
-[
+\[
 \begin{aligned}
 x_c &= R(1 + \cos\theta) \
 y_c &= R\sin\theta \
 z_c &= -\left(\cos\theta + 1\right)\frac{\Delta h}{2}
 \end{aligned}
-]
+\]
 
 where:
-
+\[
 * (R = 1000\ \text{km})
 * (\Delta h = 1\ \text{km})
 * (\theta \in [\pi, -\pi])
+\]
 
 The trajectory spans a sufficiently large region that Earth curvature effects become visible.
 
