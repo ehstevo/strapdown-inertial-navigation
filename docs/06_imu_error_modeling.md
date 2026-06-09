@@ -337,9 +337,9 @@ For visualization purposes, accelerometer noise is scaled to make its effects mo
 
 ### All Gyroscope Axes
 
-![Gyro All](../results/figures/noisy_imu_demo/gyro_all_horizontal.png)
+![Gyro All](../results/figures/noisy_imu_demo/gyro_all_horizontal.pdf)
 
-![Gyro All Vertical](../results/figures/noisy_imu_demo/gyro_all_vertical.png)
+![Gyro All Vertical](../results/figures/noisy_imu_demo/gyro_all_vertical.pdf)
 
 ### Observation
 
@@ -367,9 +367,9 @@ This demonstrates that navigation sensitivity depends on both vehicle dynamics a
 
 ### All Accelerometer Axes
 
-![Accel All](../results/figures/noisy_imu_demo/accel_all_horizontal.png)
+![Accel All](../results/figures/noisy_imu_demo/accel_all_horizontal.pdf)
 
-![Accel All Vertical](../results/figures/noisy_imu_demo/accel_all_vertical.png)
+![Accel All Vertical](../results/figures/noisy_imu_demo/accel_all_vertical.pdf)
 
 ### Observation
 
@@ -393,9 +393,9 @@ Axes aligned with the dominant vehicle motion generally produce the largest posi
 
 ### Combined Accelerometer and Gyroscope Noise
 
-![All Sensors Horizontal](../results/figures/noisy_imu_demo/all_sensors_horizontal.png)
+![All Sensors Horizontal](../results/figures/noisy_imu_demo/all_sensors_horizontal.pdf)
 
-![All Sensors Vertical](../results/figures/noisy_imu_demo/all_sensors_vertical.png)
+![All Sensors Vertical](../results/figures/noisy_imu_demo/all_sensors_vertical.pdf)
 
 ### Observation
 
