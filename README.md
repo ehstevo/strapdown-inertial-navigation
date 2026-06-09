@@ -88,6 +88,83 @@ The primary goals of this repository are:
 
 ---
 
+# Getting Started
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/<username>/strapdown-inertial-navigation.git
+cd strapdown-inertial-navigation
+```
+
+---
+
+## Create a Virtual Environment
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run an Example
+
+The repository is organized around standalone demonstrations.
+
+For example:
+
+```bash
+python -m examples.ellipsoidal_earth_demo
+```
+
+```bash
+python -m examples.forward_mechanization_demo
+```
+
+```bash
+python -m examples.noisy_imu_demo
+```
+
+```bash
+python -m examples.schuler_oscillation_demo
+```
+
+Generated figures will be saved to:
+
+```text
+results/figures/
+```
+
+---
+
+## Recommended Demonstrations
+
+For readers interested primarily in inertial navigation and estimation:
+
+1. Forward Mechanization
+2. IMU Error Modeling
+3. Schuler Oscillation
+4. Static Alignment
+
+These demonstrations contain the majority of the navigation-specific concepts developed throughout the project.
+
+---
+
 # Demonstration Progression
 
 The demonstrations are intentionally ordered so that each experiment builds upon concepts introduced previously.
