@@ -393,9 +393,9 @@ Axes aligned with the dominant vehicle motion generally produce the largest posi
 
 ### Combined Accelerometer and Gyroscope Noise
 
-![All Sensors Horizontal](../results/figures/noisy_imu_demo/all_sensors_horizontal.pdf)
+![All Sensors Horizontal](../results/figures/noisy_imu_demo/all_horizontal.pdf)
 
-![All Sensors Vertical](../results/figures/noisy_imu_demo/all_sensors_vertical.pdf)
+![All Sensors Vertical](../results/figures/noisy_imu_demo/all_vertical.pdf)
 
 ### Observation
 
