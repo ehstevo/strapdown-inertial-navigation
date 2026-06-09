@@ -27,21 +27,21 @@ These concepts form the foundation for later inertial navigation mechanization e
 
 The aircraft follows a simple northward trajectory:
 
-[
+```math
 \phi_d = \frac{\pi}{2}\left(\frac{t}{t_{dur}}\right)
-]
+```
 
 where:
 
-* (\phi_d) is geodetic latitude,
-* (t_{dur} = 12\ \text{hours}),
+* $\phi_d$ is geodetic latitude,
+* $t_{dur} = 12\ \text{hours}$,
 * longitude is fixed at zero,
 * and altitude remains constant at 1 km above the ellipsoid.
 
 The simulation uses:
 
 * a sampling period of 10 minutes,
-* and assumes the ECI and ECEF frames align at (t = 0).
+* and assumes the ECI and ECEF frames align at $t = 0$.
 
 ---
 
@@ -77,9 +77,7 @@ Several velocity quantities are evaluated in this experiment.
 
 ## Inertial-Relative Velocity
 
-[
-\mathbf{v}_{ei}
-]
+$\mathbf{v}_{ei}$
 
 represents the velocity of the Earth-fixed frame relative to the inertial frame.
 
@@ -87,9 +85,7 @@ represents the velocity of the Earth-fixed frame relative to the inertial frame.
 
 ## Earth-Relative Velocity
 
-[
-\mathbf{v}_{e}
-]
+$\mathbf{v}_{e}$
 
 represents the velocity obtained by differentiating ECEF position directly in the ECEF frame.
 
@@ -163,9 +159,9 @@ The ECEF axes rotate with the Earth, while the inertial frame remains fixed.
 
 The following figure compares the magnitudes of:
 
-* (v_i),
-* (v_{ei}),
-* and (v_{ni}).
+* $v_i$,
+* $v_{ei}$,
+* and $v_{ni}$.
 
 ![Inertial Relative Velocity Magnitudes](../results/figures/kinematics_demo/inertial_relative_velocity_norms.pdf)
 
@@ -183,9 +179,9 @@ The gradual decrease in velocity magnitude occurs because Earth rotation contrib
 
 The next figure compares the magnitudes of:
 
-* (v_e),
-* (v_{ie}),
-* and (v_{ne}).
+* $v_e$,
+* $v_{ie}$,
+* and $v_{ne}$.
 
 ![Earth Relative Velocity Magnitudes](../results/figures/kinematics_demo/earth_relative_velocity_norms.pdf)
 

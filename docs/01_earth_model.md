@@ -40,9 +40,9 @@ z_c &= -\left(\cos\theta + 1\right)\frac{\Delta h}{2}
 
 where:
 
-* $(R = 1000\ \text{km})$
-* $(\Delta h = 1\ \text{km})$
-* $(\theta \in [\pi, -\pi])$
+* $R = 1000\ \text{km}$
+* $\Delta h = 1\ \text{km}$
+* $\theta \in [\pi, -\pi]$
 
 
 The trajectory spans a sufficiently large region that Earth curvature effects become visible.
@@ -95,7 +95,7 @@ This illustrates one of the fundamental limitations of flat-Earth approximations
 
 The next figure compares:
 
-* the curvilinear vertical coordinate (z_c), and
+* the curvilinear vertical coordinate $z_c$, and
 * the geodetic height above the ellipsoid.
 
 ![zc vs Height](../results/figures/ellipsoidal_earth_demo/zc_vs_height.pdf)
@@ -104,7 +104,7 @@ The next figure compares:
 
 The curvilinear frame defines positive vertical motion downward, while geodetic height is measured upward from the ellipsoid.
 
-Returning to (z_c = 0) simply means the aircraft returned to the original local vertical reference.
+Returning to $z_c = 0$ simply means the aircraft returned to the original local vertical reference.
 
 This does not imply that all Earth-referenced vertical quantities evolve identically along the trajectory.
 

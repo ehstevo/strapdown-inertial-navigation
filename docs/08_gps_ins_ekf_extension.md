@@ -140,7 +140,7 @@ The mechanization would continue to operate at the IMU update rate while GPS mea
 
 A simple implementation could estimate:
 
-\[
+```math
 \mathbf{x}
 =
 \begin{bmatrix}
@@ -154,13 +154,13 @@ v_d \\
 \theta \\
 \psi
 \end{bmatrix}
-\]
+```
 
 where:
 
-- \(p_n,p_e,p_d\) represent position,
-- \(v_n,v_e,v_d\) represent velocity,
-- \(\phi,\theta,\psi\) represent roll, pitch, and yaw.
+- $p_n,p_e,p_d$ represent position,
+- $v_n,v_e,v_d$ represent velocity,
+- $\phi,\theta,\psi$ represent roll, pitch, and yaw.
 
 This state vector directly corresponds to the navigation quantities propagated by the forward mechanization algorithm.
 
@@ -172,17 +172,17 @@ The state would be propagated using the strapdown mechanization developed earlie
 
 The nonlinear propagation equation is:
 
-\[
+```math
 \mathbf{x}_{k+1}
 =
 f(\mathbf{x}_k,\mathbf{u}_k)
-\]
+```
 
 where:
 
-- \(\mathbf{x}_k\) is the navigation state,
-- \(\mathbf{u}_k\) contains accelerometer and gyroscope measurements,
-- \(f(\cdot)\) represents the forward mechanization algorithm.
+- $\mathbf{x}_k$ is the navigation state,
+- $\mathbf{u}_k$ contains accelerometer and gyroscope measurements,
+- $f(\cdot)$ represents the forward mechanization algorithm.
 
 The mechanization would continue operating at the IMU update rate regardless of GPS availability.
 
@@ -192,7 +192,7 @@ The mechanization would continue operating at the IMU update rate regardless of 
 
 GPS would provide position measurements of the form:
 
-\[
+```math
 \mathbf{z}
 =
 \begin{bmatrix}
@@ -202,26 +202,26 @@ p_d
 \end{bmatrix}
 +
 \mathbf{v}
-\]
+```
 
 where:
 
-- \(\mathbf{z}\) is the GPS measurement,
-- \(\mathbf{v}\) represents measurement noise.
+- $\mathbf{z}$ is the GPS measurement,
+- $\mathbf{v}$ represents measurement noise.
 
 The corresponding measurement function would be:
 
-\[
+```math
 \mathbf{z}
 =
 h(\mathbf{x})
 +
 \mathbf{v}
-\]
+```
 
 with
 
-\[
+```math
 h(\mathbf{x})
 =
 \begin{bmatrix}
@@ -229,7 +229,7 @@ p_n \\
 p_e \\
 p_d
 \end{bmatrix}
-\]
+```
 
 ---
 
@@ -243,19 +243,19 @@ The proposed implementation would include:
 
 ## Prediction
 
-\[
+```math
 P_{k+1}
 =
 F_k P_k F_k^T
 +
 Q_k
-\]
+```
 
 where:
 
-- \(P\) is the state covariance matrix,
-- \(F\) is the linearized state-transition matrix,
-- \(Q\) represents process noise.
+- $P$ is the state covariance matrix,
+- $F$ is the linearized state-transition matrix,
+- $Q$ represents process noise.
 
 The process noise would incorporate the IMU error models developed in the IMU Error Modeling demonstration.
 
@@ -265,53 +265,53 @@ The process noise would incorporate the IMU error models developed in the IMU Er
 
 ### Innovation Covariance
 
-\[
+```math
 S
 =
 H P H^T
 +
 R
-\]
+```
 
 ### Kalman Gain
 
-\[
+```math
 K
 =
 P H^T S^{-1}
-\]
+```
 
 ### State Correction
 
-\[
+```math
 \hat{x}
 =
 \hat{x}
 +
 K r
-\]
+```
 
 where
 
-\[
+```math
 r
 =
 z
 -
 h(\hat{x})
-\]
+```
 
 is the measurement residual.
 
 ### Covariance Update
 
-\[
+```math
 P
 =
 P
 -
 K H P
-\]
+```
 
 These equations determine how much trust should be placed in:
 

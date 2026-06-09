@@ -42,19 +42,19 @@ The simulation duration is:
 
 The aircraft trajectory is defined in a local curvilinear frame centered at the origin.
 
-[
+```math
 \begin{aligned}
 x_c &= \frac{R}{4}\sin(2\theta) \
 y_c &= R(\cos\theta - 1) \
 z_c &= \frac{\Delta h}{2}(\cos\theta - 1)
 \end{aligned}
-]
+```
 
 where:
 
-* (R = 1000\ \text{m})
-* (\Delta h = 100\ \text{m})
-* (\theta \in [0, 2\pi])
+* $R = 1000\ \text{m}$
+* $\Delta h = 100\ \text{m}$
+* $\theta \in [0, 2\pi]$
 
 This trajectory creates:
 
@@ -72,25 +72,19 @@ The aircraft attitude is prescribed using roll, pitch, and yaw angles.
 
 ## Roll
 
-[
-\phi = -\frac{1}{27}\cos(\theta)
-]
+$\phi = -\frac{1}{27}\cos(\theta)$
 
 ---
 
 ## Pitch
 
-[
-\theta_p = -\frac{1}{48}\sin(2\theta) + \frac{1}{143}\sin(4\theta)
-]
+$\theta_p = -\frac{1}{48}\sin(2\theta) + \frac{1}{143}\sin(4\theta)$
 
 ---
 
 ## Yaw
 
-[
-\psi = \arctan2\left(-2\sin(\theta), \cos(2\theta)\right)
-]
+$\psi = \arctan2\left(-2\sin(\theta), \cos(2\theta)\right)$
 
 The attitude profile is intentionally smooth so that:
 
@@ -119,9 +113,7 @@ These quantities correspond to what ideal accelerometers and gyroscopes would me
 
 The local curvilinear trajectory is first transformed into geodetic coordinates:
 
-[
-(x_c, y_c, z_c) \rightarrow (\phi, \lambda, h)
-]
+$(x_c, y_c, z_c) \rightarrow (\phi, \lambda, h)$
 
 The geodetic trajectory is then used to compute:
 
@@ -140,9 +132,7 @@ The gyroscope measurements are generated using the inverse gyroscope equation.
 
 The body angular rate relative to inertial space is:
 
-[
-\omega_{b,bi}
-]
+$\omega_{b,bi}$
 
 which includes contributions from:
 
@@ -152,14 +142,12 @@ which includes contributions from:
 
 The incremental attitude change between time steps is computed using:
 
-[
-S = C_{nb}^T C_{nb}^+
-]
+$S = C_{nb}^T C_{nb}^+$
 
 where:
 
-* (C_{nb}) is the current body-to-navigation DCM,
-* and (C_{nb}^+) is the next-step DCM.
+* $C_{nb}$ is the current body-to-navigation DCM,
+* and $C_{nb}^+$ is the next-step DCM.
 
 The incremental rotation matrix is then converted into an angular-rate vector.
 
@@ -171,9 +159,7 @@ Navigation-frame velocity is reconstructed from the geodetic trajectory.
 
 The velocity components are:
 
-[
-\mathbf{v}_{ne}
-]
+$\mathbf{v}_{ne}$
 
 expressed in the local navigation frame.
 
@@ -205,9 +191,7 @@ Importantly:
 
 Instead, they measure:
 
-[
-\text{specific force} = \text{kinematic acceleration} - \text{gravity}
-]
+$\text{specific force} = \text{kinematic acceleration} - \text{gravity}$
 
 This distinction is fundamental to inertial navigation.
 
@@ -326,11 +310,11 @@ The generated IMU and velocity data are saved to a binary file for later experim
 
 Each row contains:
 
-[
+```math
 [f_{b,bi,x}, f_{b,bi,y}, f_{b,bi,z},
 \omega_{b,bi,x}, \omega_{b,bi,y}, \omega_{b,bi,z},
 v_{ne,x}, v_{ne,y}, v_{ne,z}]
-]
+```
 
 This synthetic dataset is later reused for:
 

@@ -66,9 +66,7 @@ When the IMU is stationary, the accelerometers measure gravity.
 
 The measured specific force vector points opposite the local gravity vector:
 
-\[
-\mathbf{f}^b \approx -\mathbf{g}^b
-\]
+$\mathbf{f}^b \approx -\mathbf{g}^b$
 
 Since gravity always points downward, the measured gravity direction uniquely determines:
 
@@ -77,26 +75,26 @@ Since gravity always points downward, the measured gravity direction uniquely de
 
 The alignment equations used in this experiment are:
 
-\[
+```math
 p = \tan^{-1}
 \left(
 \frac{f_x}
 {\sqrt{f_y^2 + f_z^2}}
 \right)
-\]
+```
 
-\[
+```math
 r = \tan^{-1}
 \left(
 \frac{-f_y}
 {-f_z}
 \right)
-\]
+```
 
 where:
 
-- \(r\) is roll,
-- \(p\) is pitch.
+- $r$ is roll,
+- $p$ is pitch.
 
 ---
 
@@ -106,10 +104,10 @@ Once roll and pitch have been determined, the measured Earth-rate vector can be 
 
 Earth rotates at approximately:
 
-\[
+```math
 \omega_E = 7.292115 \times 10^{-5}
 \ \text{rad/s}
-\]
+```
 
 The gyroscopes measure this rotation in the body frame.
 
@@ -125,7 +123,7 @@ This process is often referred to as:
 
 The Earth-rate vector in the navigation frame is:
 
-\[
+```math
 \boldsymbol{\omega}_{n,ei}
 =
 \begin{bmatrix}
@@ -133,15 +131,15 @@ The Earth-rate vector in the navigation frame is:
 0 \\
 -\omega_E \sin(\phi)
 \end{bmatrix}
-\]
+```
 
 where:
 
-- \(\phi\) is latitude.
+- $\phi$ is latitude.
 
 After estimating the navigation-frame Earth-rate vector, latitude can be recovered from:
 
-\[
+```math
 \phi
 =
 \tan^{-1}
@@ -149,7 +147,7 @@ After estimating the navigation-frame Earth-rate vector, latitude can be recover
 \frac{-\omega_z}
 {\omega_x}
 \right)
-\]
+```
 
 ---
 
@@ -272,12 +270,12 @@ The residual gyroscope measurements exhibit noticeable variability.
 
 Earth rotation is extremely small:
 
-\[
+```math
 \omega_E
 =
 7.292115\times10^{-5}
 \ \text{rad/s}
-\]
+```
 
 As a result, gyroscope noise has a significant effect on the estimated Earth-rate vector.
 
@@ -312,16 +310,14 @@ The primary challenge in static alignment is measuring Earth rotation.
 
 Earth rotation is approximately:
 
-\[
-15^\circ/\text{hour}
-\]
+$15^\circ/\text{hour}$
 
 which corresponds to only:
 
-\[
+```math
 7.29\times10^{-5}
 \ \text{rad/s}
-\]
+```
 
 Successfully resolving such a small signal requires a low-noise gyroscope.
 

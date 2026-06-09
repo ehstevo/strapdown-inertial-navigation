@@ -30,9 +30,9 @@ A stationary aircraft is placed at:
 
 | Parameter | Value |
 |------------|--------|
-| Latitude | 39.783° |
-| Longitude | -84.083° |
-| Height Above Ellipsoid | 317 m |
+| Latitude | 39.535° |
+| Longitude | -76.348° |
+| Height Above Ellipsoid | 212 m |
 | Duration | 6 hours |
 | Sample Period | 1 s |
 
@@ -52,9 +52,7 @@ Any observed motion is therefore caused entirely by sensor biases or navigation-
 
 The classical Schuler period is
 
-\[
-T = 2\pi\sqrt{\frac{R_E}{g}}
-\]
+$T = 2\pi\sqrt{\frac{R_E}{g}}$
 
 which evaluates to approximately:
 
@@ -150,9 +148,7 @@ The gyroscope bias produces a continuously growing roll error.
 
 The resulting attitude error causes gravity to be projected incorrectly into the horizontal plane:
 
-\[
-a_h \approx g\theta
-\]
+$a_h \approx g\theta$
 
 The ripple corresponds to Schuler oscillation.
 
