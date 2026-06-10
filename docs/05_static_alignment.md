@@ -176,10 +176,10 @@ Using the mean accelerometer and gyroscope measurements, the estimated alignment
 
 | Quantity | Value |
 |-----------|-----------|
-| Roll | *computed by demo* |
-| Pitch | *computed by demo* |
-| Yaw | *computed by demo* |
-| Latitude | *computed by demo* |
+| Roll | -3.11 rad (-177.95 deg) |
+| Pitch | -0.03 rad (-1.75 deg) |
+| Yaw | 1.46 rad (83.70 deg) |
+| Latitude | 0.53 rad (30.43 deg) |
 
 ### Interpretation
 
@@ -195,10 +195,10 @@ Using the same alignment procedure:
 
 | Quantity | Value |
 |-----------|-----------|
-| Roll | *computed by demo* |
-| Pitch | *computed by demo* |
-| Yaw | *computed by demo* |
-| Latitude | *computed by demo* |
+| Roll | 3.12 rad (178.59 deg) |
+| Pitch | 0.02 rad (1.21 deg) |
+| Yaw | -0.35 rad (-20.05 deg) |
+| Latitude | 1.15 rad (65.92 deg) |
 
 ### Interpretation
 
