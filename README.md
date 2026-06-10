@@ -93,7 +93,7 @@ The primary goals of this repository are:
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/<username>/strapdown-inertial-navigation.git
+git clone https://github.com/ehstevo/strapdown-inertial-navigation.git
 cd strapdown-inertial-navigation
 ```
 
